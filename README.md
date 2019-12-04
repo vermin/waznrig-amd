@@ -1,19 +1,9 @@
-# XMRigCC-amd (OpenCL)
+WAZNRigCC (OpenCL)
+======================
 
-:warning: **Confused by all the forks? Check the [Coin Configuration](https://github.com/Bendr0id/xmrigCC/wiki/Coin-configurations) guide.**
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue)](https://opensource.org/licenses/GPL-3.0)
 
-:bulb: **This is the AMD GPU (OpenCL) variant of XMRigCC, if you're looking for the CPU variant [click here](https://github.com/Bendr0id/xmrigCC/).**
-
-
-[![GitHub release](https://img.shields.io/github/release/bendr0id/xmrigCC-amd/all.svg)](https://github.com/bendr0id/xmrigCC-amd/releases)
-[![Github downloads latest](https://img.shields.io/github/downloads/bendr0id/xmrigCC-amd/latest/total.svg)](https://github.com/bendr0id/xmrigCC-amd/releases)
-[![Github downloads total](https://img.shields.io/github/downloads/bendr0id/xmrigCC-amd/total.svg)](https://github.com/bendr0id/xmrigCC-amd/releases)
-[![GitHub stars](https://img.shields.io/github/stars/bendr0id/xmrigCC-amd.svg)](https://github.com/bendr0id/xmrigCC-amd/stargazers)
-
-![XMRigCC Logo](https://i.imgur.com/7mi0WCe.png)
-
-
-### About XMRigCC-amd (OpenCL)
+### About XMRigCC (OpenCL)
 
 XMRigCC-amd is a fork of [XMRig-amd](https://github.com/xmrig/xmrig-amd) which adds the ability to remote control your XMRig-amd instances via a Webfrontend and REST api.
 This fork is based on XMRig-amd and adds a "Command and Control" (C&amp;C) server, a daemon to reload the miner on config changes and modifications in XMRig-amd to send the current status to the C&amp;C Server.
@@ -58,8 +48,8 @@ xmrigCCServer --cc-port=3344 --cc-user=admin --cc-pass=pass --cc-access-token=SE
         --cc-access-token=T               CC Server access token for CC Client
         --cc-port=N                       CC Server
         --cc-use-tls                      enable tls encryption for CC communication
-        --cc-cert-file=FILE               when tls is turned on, use this to point to the right cert file (default: server.pem) 
-        --cc-key-file=FILE                when tls is turned on, use this to point to the right key file (default: server.key) 
+        --cc-cert-file=FILE               when tls is turned on, use this to point to the right cert file (default: server.pem)
+        --cc-key-file=FILE                when tls is turned on, use this to point to the right key file (default: server.key)
         --cc-client-config-folder=FOLDER  Folder contains the client config files
         --cc-custom-dashboard=FILE        loads a custom dashboard and serve it to '/'
         --no-color                        disable colored output
@@ -122,23 +112,13 @@ Also you can use configuration via config file, default **[config.json](https://
 ### Windows only: DLL error on starting
 * Make sure that you installed latest Visual C++ Redistributable for Visual Studio 2015. Can be downloaded here: [microsoft.com](https://www.microsoft.com/de-de/download/details.aspx?id=48145)
 
-## Donations
-* Default donation 5% (5 minutes in 100 minutes) can be reduced to 1% via command line option `--donate-level`. 
+## Contacts
+* [WAZN](link)
 
-##### BenDroid (xmrigCC):
-XMR:  `4BEn3sSa2SsHBcwa9dNdKnGvvbyHPABr2JzoY7omn7DA2hPv84pVFvwDrcwMCWgz3dQVcrkw3gE9aTC9Mi5HxzkfF9ev1eH`
-
-AEON: `Wmtm4S2cQ8uEBBAVjvbiaVAPv2d6gA1mAUmBmjna4VF7VixLxLRUYag5cvsym3WnuzdJ9zvhQ3Xwa8gWxPDPRfcQ3AUkYra3W`
-
-BTC:  `3Gwq9tveCZtLAiXX7mxhjbrh38GPx1iXdB`
-
-##### xmrig:
-XMR:  `48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD`
-
-BTC:  `1P7ujsXeX7GxQwHNnJsRMgAdNkFZmNVqJT`
-
-## Contact
-* ben [at] graef.in
-* Telegram: @BenDr0id
-* [discord](https://discord.gg/r3rCKTB)
-* [reddit](https://www.reddit.com/user/BenDr0id/)
+## License
+```
+Licensed under the GPL-3.0
+Copyright (c) 2019 WAZN Project
+Copyright (c) 2019 QuantumLeaper
+Copyright (c) 2017-2019 xmrig
+```
