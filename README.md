@@ -119,6 +119,6 @@ Also you can use configuration via config file, default **[config.json](https://
 ```
 Licensed under the GPL-3.0
 Copyright (c) 2019 WAZN Project
-Copyright (c) 2019 QuantumLeaper
+Copyright (c) 2018-2019 Bendr0id
 Copyright (c) 2017-2019 xmrig
 ```
