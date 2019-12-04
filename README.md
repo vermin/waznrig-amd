@@ -1,21 +1,15 @@
-WAZNRigCC (OpenCL)
+WAZNRig-amd (OpenCL)
 ======================
 
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue)](https://opensource.org/licenses/GPL-3.0)
 
-### About XMRigCC (OpenCL)
+### About WAZNRig-amd (OpenCL)
 
-XMRigCC-amd is a fork of [XMRig-amd](https://github.com/xmrig/xmrig-amd) which adds the ability to remote control your XMRig-amd instances via a Webfrontend and REST api.
-This fork is based on XMRig-amd and adds a "Command and Control" (C&amp;C) server, a daemon to reload the miner on config changes and modifications in XMRig-amd to send the current status to the C&amp;C Server.
+WAZNRig-amd is a fork of [XMRigCC-amd](https://github.com/Bendr0id/xmrigCC-amd) which adds the ability to remote control your WAZNRig-amd instances via a Webfrontend and REST api.
+This fork is based on XMRigCC-amd and adds a "Command and Control" (C&amp;C) server, a daemon to reload the miner on config changes and modifications in XMRig-amd to send the current status to the C&amp;C Server.
 The modified version can also handle commands like "update config", "start/stop mining" or "restart/shutdown" which can be send from the C&amp;C-Server.
 
 GPU mining part based on [Wolf9466](https://github.com/OhGodAPet) and [psychocrypt](https://github.com/psychocrypt) code.
-
-
-:warning: Suggested values for GPU auto configuration can be not optimal or not working, you may need tweak your threads options. Please fell free open an [issue](https://github.com/bendr0id/xmrigCC-amd/issues) if auto configuration suggest wrong values.
-
-**[Find Help/Howto](https://github.com/Bendr0id/xmrigCC/wiki/)**
-
 
 **XMRigCC Daemon(miner)**
 
@@ -31,17 +25,17 @@ GPU mining part based on [Wolf9466](https://github.com/OhGodAPet) and [psychocry
 
 
 ## Download
-* Binary releases: https://github.com/Bendr0id/xmrigCC-amd/releases
-* Git tree: https://github.com/Bendr0id/xmrigCC-amd.git
-  * Clone with `git clone https://github.com/Bendr0id/xmrigCC.git` :hammer: [Build instructions](https://github.com/Bendr0id/xmrigCC/wiki/Build-Debian%5CUbuntu).
+* Binary releases: https://github.com/project-wazn/waznrig-amd/releases
+* Git tree: https://github.com/project-wazn/waznrig-amd.git
+  * Clone with `git clone https://github.com/project-wazn/waznrig-amd.git`  [Build instructions](https://github.com/project-wazn/waznrig-amd/wiki/Build-Debian%5CUbuntu).
 
 ## Usage
-### Basic example xmrigCCServer
+### Basic example waznrigServer
 ```
-xmrigCCServer --cc-port=3344 --cc-user=admin --cc-pass=pass --cc-access-token=SECRET_TOKEN_TO_ACCESS_CC_SERVER
+waznrigServer --cc-port=3344 --cc-user=admin --cc-pass=pass --cc-access-token=SECRET_TOKEN_TO_ACCESS_CC_SERVER
 ```
 
-### Options xmrigCCServer
+### Options waznrigServer
 ```
         --cc-user=USERNAME                CC Server admin user
         --cc-pass=PASSWORD                CC Server admin pass
@@ -64,14 +58,14 @@ xmrigCCServer --cc-port=3344 --cc-user=admin --cc-pass=pass --cc-access-token=SE
 
 Also you can use configuration via config file, default **[config_cc.json](https://github.com/Bendr0id/xmrigCC/wiki/Config-XMRigCCServer)**. You can load multiple config files and combine it with command line options.
 
-### Basic example xmrigDaemon
+### Basic example waznrigDaemon
 ```
-xmrigDaemon -o pool.minemonero.pro:5555 -u YOUR_WALLET -p x -k --cc-url=IP_OF_CC_SERVER:PORT --cc-access-token=SECRET_TOKEN_TO_ACCESS_CC_SERVER --cc-worker-id=OPTIONAL_WORKER_NAME
+waznrigDaemon -o pool.wazn.io:5555 -u YOUR_WAZN_WALLET -p x -k --cc-url=IP_OF_CC_SERVER:PORT --cc-access-token=SECRET_TOKEN_TO_ACCESS_CC_SERVER --cc-worker-id=OPTIONAL_WORKER_NAME
 ```
 
-### Options xmrigDaemon
+### Options waznrigDaemon
 ```
-  -a, --algo=ALGO               cryptonight (default) or cryptonight-lite
+  -a, --algo=ALGO               cryptonight (default) or cryptonight-wazn1
   -o, --url=URL                 URL of mining server
   -O, --userpass=U:P            username:password pair for mining server
   -u, --user=USERNAME           username for mining server
@@ -106,8 +100,8 @@ xmrigDaemon -o pool.minemonero.pro:5555 -u YOUR_WALLET -p x -k --cc-url=IP_OF_CC
 Also you can use configuration via config file, default **[config.json](https://github.com/Bendr0id/xmrigCC/wiki/Config-XMRigDaemon)**. You can load multiple config files and combine it with command line options.
 
 ## Common Issues
-### XMRigMiner
-* XMRigMiner is just the worker, it is not designed to work standalone. Please start **XMRigDaemon** instead.
+### waznrigMiner
+* waznrigMiner is just the worker, it is not designed to work standalone. Please start **waznrigDaemon** instead.
 
 ### Windows only: DLL error on starting
 * Make sure that you installed latest Visual C++ Redistributable for Visual Studio 2015. Can be downloaded here: [microsoft.com](https://www.microsoft.com/de-de/download/details.aspx?id=48145)

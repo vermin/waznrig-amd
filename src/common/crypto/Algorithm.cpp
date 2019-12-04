@@ -105,9 +105,11 @@ static AlgoData const algorithms[] = {
 #   endif
 
 #   ifndef XMRIG_NO_CN_EXTREMELITE
-    { "cryptonight-extremelite",        "cn-extremelite",        xmrig::CRYPTONIGHT_EXTREMELITE, xmrig::VARIANT_UPX2 },
-    { "cryptonight-extremelite/upx2",   "cn-extremelite/upx2",   xmrig::CRYPTONIGHT_EXTREMELITE, xmrig::VARIANT_UPX2 },
-    { "cryptonight-upx2",               "cn-upx2",               xmrig::CRYPTONIGHT_EXTREMELITE, xmrig::VARIANT_UPX2 },
+    { "cryptonight-extremelite",        "cn-extremelite",        xmrig::CRYPTONIGHT_EXTREMELITE, xmrig::VARIANT_AUTO  },
+    { "cryptonight-extremelite/wazn1",  "cn-extremelite/wazn1",  xmrig::CRYPTONIGHT_EXTREMELITE, xmrig::VARIANT_WAZN1 },
+    { "cryptonight-wazn1",              "cn-wazn1",              xmrig::CRYPTONIGHT_EXTREMELITE, xmrig::VARIANT_WAZN1 },
+    { "cryptonight-extremelite/upx2",   "cn-extremelite/upx2",   xmrig::CRYPTONIGHT_EXTREMELITE, xmrig::VARIANT_UPX2  },
+    { "cryptonight-upx2",               "cn-upx2",               xmrig::CRYPTONIGHT_EXTREMELITE, xmrig::VARIANT_UPX2  },
 #   endif
 
 #   ifndef XMRIG_NO_CN_GPU
@@ -134,7 +136,7 @@ static AlgoData const xmrStakAlgorithms[] = {
     { "cryptonight_alloy",       nullptr, xmrig::CRYPTONIGHT,       xmrig::VARIANT_XAO  }, // xmr-stak-alloy
     { "cryptonight_turtle",      nullptr, xmrig::CRYPTONIGHT_PICO,  xmrig::VARIANT_TRTL },
     { "cryptonight_gpu",         nullptr, xmrig::CRYPTONIGHT,       xmrig::VARIANT_GPU  },
-    { "cryptonight_r",           nullptr, xmrig::CRYPTONIGHT,       xmrig::VARIANT_4  },
+    { "cryptonight_r",           nullptr, xmrig::CRYPTONIGHT,       xmrig::VARIANT_4    },
 };
 #endif
 
@@ -159,7 +161,8 @@ static const char *variants[] = {
     "rwz",
     "zelerius",
     "double",
-    "upx2"
+    "upx2",
+    "wazn1"
 };
 
 
@@ -242,7 +245,7 @@ void xmrig::Algorithm::parseVariant(const char *variant)
     }
 
     if (m_algo == xmrig::CRYPTONIGHT_EXTREMELITE) {
-        m_variant = VARIANT_UPX2;
+        m_variant = VARIANT_WAZN1;
         return;
     }
 
@@ -309,7 +312,7 @@ void xmrig::Algorithm::setAlgo(Algo algo)
     }
 
     if (m_algo == CRYPTONIGHT_EXTREMELITE && m_variant == VARIANT_AUTO) {
-        m_variant = xmrig::VARIANT_UPX2;
+        m_variant = xmrig::VARIANT_WAZN1;
     }
 }
 

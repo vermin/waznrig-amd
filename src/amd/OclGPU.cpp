@@ -114,6 +114,7 @@ inline static int cn1KernelOffset(xmrig::Variant variant)
 
     case xmrig::VARIANT_RWZ:
     case xmrig::VARIANT_UPX2:
+    case xmrig::VARIANT_WAZN1:
         return 15;
 
     case xmrig::VARIANT_ZELERIUS:
@@ -570,7 +571,7 @@ size_t XMRSetJob(GpuContext *ctx, uint8_t *input, size_t input_len, uint64_t tar
 
     input[input_len] = 0x01;
     memset(input + input_len + 1, 0, 128 - input_len - 1);
-    
+
     cl_uint numThreads = ctx->rawIntensity;
 
     if ((ret = OclLib::enqueueWriteBuffer(ctx->CommandQueues, ctx->InputBuffer, CL_TRUE, 0, 128, input, 0, nullptr, nullptr)) != CL_SUCCESS) {

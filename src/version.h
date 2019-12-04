@@ -25,18 +25,18 @@
 #ifndef XMRIG_VERSION_H
 #define XMRIG_VERSION_H
 
-#define APP_ID        "XMRigCC-AMD"
-#define APP_NAME      "XMRigCC-AMD"
-#define APP_COPYRIGHT "Copyright (C) 2017- BenDr0id"
-#define APP_DESC      "XMRigCC-AMD OpenCL miner"
-#define APP_VERSION   "1.9.5 (based on XMRig 2.14.5)"
-#define APP_SITE      "https://github.com/Bendr0id/xmrigCC-amd"
+#define APP_ID        "WAZNRig-AMD"
+#define APP_NAME      "WAZNRig-AMD"
+#define APP_COPYRIGHT "Copyright (C) 2019 Project Wazn"
+#define APP_DESC      "WAZNRig-AMD OpenCL Miner"
+#define APP_VERSION   "1.9.9"
+#define APP_SITE      "https://github.com/project-waz/waznrig-amd"
 #define APP_DOMAIN    ""
 #define APP_KIND      "amd"
 
 #define APP_VER_MAJOR  1
 #define APP_VER_MINOR  9
-#define APP_VER_PATCH  5
+#define APP_VER_PATCH  9
 
 #define TYPE_AMD_GPU
 

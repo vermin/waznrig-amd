@@ -1,10 +1,11 @@
 ### 2.0.0
-- Tested and 'waznized' version available for public
+- Tested and completelyy 'waznized' version available for public
 
 ============================================
 
 ### 1.9.9
-- First WAZN retouch and added cn-wazn
+- Integrated cn-wazn1 variant (algo: "cryptonight-extremelite", variant: "wazn1" OR variant: "auto")
+- First WAZN retouch
 ### 1.9.5
 - Rebase from XMRig-amd 2.15.4 (Fixed compatibility with recent AMD drivers (19.7.2), thanks @psychocrypt)
 - Added possibility to delete templates #257

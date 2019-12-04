@@ -47,6 +47,7 @@ constexpr const uint32_t CRYPTONIGHT_DOUBLE_ITER    = 0x100000;
 constexpr const uint32_t CRYPTONIGHT_WALTZ_ITER     = 0x60000;
 constexpr const uint32_t CRYPTONIGHT_ZLS_ITER       = 0x60000;
 constexpr const uint32_t CRYPTONIGHT_UPX2_ITER      = 0x4000;
+constexpr const uint32_t CRYPTONIGHT_WAZN1_ITER     = 0x4000;
 
 constexpr const size_t   CRYPTONIGHT_MEMORY       = 2 * 1024 * 1024;
 constexpr const uint32_t CRYPTONIGHT_MASK         = 0x1FFFF0;
@@ -159,6 +160,7 @@ template<> inline constexpr uint32_t cn_select_iter<CRYPTONIGHT_HEAVY, VARIANT_X
 template<> inline constexpr uint32_t cn_select_iter<CRYPTONIGHT_HEAVY, VARIANT_TUBE>() { return CRYPTONIGHT_HALF_ITER; }
 template<> inline constexpr uint32_t cn_select_iter<CRYPTONIGHT_ULTRALITE, VARIANT_TURTLE>()  { return CRYPTONIGHT_TRTL_ITER; }
 template<> inline constexpr uint32_t cn_select_iter<CRYPTONIGHT_EXTREMELITE, VARIANT_UPX2>()  { return CRYPTONIGHT_UPX2_ITER; }
+template<> inline constexpr uint32_t cn_select_iter<CRYPTONIGHT_EXTREMELITE, VARIANT_WAZN1>()  { return CRYPTONIGHT_WAZN1_ITER; }
 template<> inline constexpr uint32_t cn_select_iter<CRYPTONIGHT, VARIANT_GPU>()        { return CRYPTONIGHT_GPU_ITER; }
 
 
@@ -207,7 +209,7 @@ inline uint32_t cn_select_iter(Algo algorithm, Variant variant)
             return CRYPTONIGHT_TRTL_ITER;
 
         case CRYPTONIGHT_EXTREMELITE:
-            return CRYPTONIGHT_UPX2_ITER;
+            return CRYPTONIGHT_WAZN1_ITER;
 
         default:
             break;
@@ -238,6 +240,7 @@ template<> inline constexpr Variant cn_base_variant<VARIANT_RWZ>()   { return VA
 template<> inline constexpr Variant cn_base_variant<VARIANT_ZELERIUS>() { return VARIANT_2; }
 template<> inline constexpr Variant cn_base_variant<VARIANT_DOUBLE>() { return VARIANT_2; }
 template<> inline constexpr Variant cn_base_variant<VARIANT_UPX2>() { return VARIANT_2; }
+template<> inline constexpr Variant cn_base_variant<VARIANT_WAZN1>() { return VARIANT_2; }
 
 
 inline Variant cn_base_variant(Variant variant)

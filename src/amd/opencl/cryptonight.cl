@@ -52,6 +52,8 @@ XMRIG_INCLUDE_FAST_DIV_HEAVY
 #define VARIANT_RWZ = 16,       // Cryptonight (2) variant 3/4 Iterations + reverse shuffle rwz (Graft)
 #define VARIANT_ZELERIUS = 17,  // Cryptonight (2) variant 3/4 Iterations (Zelerius)
 #define VARIANT_DOUBLE = 18,    // Cryptonight (2) variant double (XCash)
+#define VARIANT_UPX2 = 19,      // Modified CryptoNight-Extremelite variant upx2
+#define VARIANT_WAZN1 = 20,     // Modified cn-extremelite variant wazn1
 
 #define CRYPTONIGHT       0 /* CryptoNight (2 MB) */
 #define CRYPTONIGHT_LITE  1 /* CryptoNight (1 MB) */
@@ -735,7 +737,7 @@ __kernel void cn1_v2_monero(__global uint4 *Scratchpad, __global ulong *states, 
 #   if (ALGO == CRYPTONIGHT || ALGO == CRYPTONIGHT_ULTRALITE)
     ulong a[2], b[4];
     __local uint AES0[256], AES1[256], AES2[256], AES3[256];
-    
+
     const ulong gIdx = getIdx();
 
     for(int i = get_local_id(0); i < 256; i += WORKSIZE)
@@ -776,10 +778,10 @@ __kernel void cn1_v2_monero(__global uint4 *Scratchpad, __global ulong *states, 
         b[2] = states[8] ^ states[10];
         b[3] = states[9] ^ states[11];
     }
-    
+
     ulong2 bx0 = ((ulong2 *)b)[0];
     ulong2 bx1 = ((ulong2 *)b)[1];
-    
+
     mem_fence(CLK_LOCAL_MEM_FENCE);
 
 #   ifdef __NV_CL_C_VERSION
@@ -879,7 +881,7 @@ __kernel void cn1_v2_monero(__global uint4 *Scratchpad, __global ulong *states, 
         bx1 = bx0;
         bx0 = as_ulong2(c);
     }
-    
+
 #   undef SCRATCHPAD_CHUNK
     }
     mem_fence(CLK_GLOBAL_MEM_FENCE);

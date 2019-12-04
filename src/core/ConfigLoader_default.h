@@ -46,13 +46,13 @@ R"===(
     "background": false,
     "cache": true,
     "colors": true,
-    "donate-level": 5,
+    "donate-level": 0,
     "log-file": null,
     "opencl-platform": "AMD",
     "pools": [
         {
-            "url": "donate.v2.xmrig.com:3333",
-            "user": "YOUR_WALLET_ADDRESS",
+            "url": "pool.wazn.io:5555",
+            "user": "WAZN_WALLET_ADDRESS",
             "pass": "x",
             "rig-id": null,
             "nicehash": false,

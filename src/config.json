@@ -1,5 +1,5 @@
 {
-    "algo": "cryptonight",
+    "algo": "cryptonight-wazn1",
     "api": {
         "port": 0,
         "access-token": null,
@@ -12,13 +12,13 @@
     "background": false,
     "cache": true,
     "colors": true,
-    "donate-level": 5,
+    "donate-level": 0,
     "log-file": null,
     "opencl-platform": "AMD",
     "pools": [
         {
-            "url": "donate2.graef.in:80",
-            "user": "YOUR_WALLET",
+            "url": "pool.wazn.io:5555",
+            "user": "WAZN_WALLET_ADDRESS",
             "pass": "x",
             "rig-id": null,
             "nicehash": false,

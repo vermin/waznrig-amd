@@ -83,6 +83,7 @@ enum Variant {
     VARIANT_ZELERIUS = 17,  // Cryptonight (2) variant 3/4 Iterations (Zelerius)
     VARIANT_DOUBLE = 18,    // Cryptonight (2) variant double (XCash)
     VARIANT_UPX2 = 19,      // Modified CryptoNight-Extremelite variant upx2
+    VARIANT_WAZN1 = 20,     // Modified CryptoNight-Extremelite variant wazn1
     VARIANT_MAX
 };
 

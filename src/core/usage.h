@@ -35,23 +35,23 @@ namespace xmrig {
 static char const usage[] = "\
 Usage: " APP_ID " [OPTIONS]\n\
 Options:\n\
-  -a, --algo=ALGO              specify the algorithm to use\n\
-                                 cryptonight\n"
+-a, --algo=ALGO              specify the algorithm to use\n\
+                               cryptonight\n"
+#ifndef XMRIG_NO_CN_EXTREMELITE
+"\
+                               cryptonight-wazn1\n"
+#endif
 #ifndef XMRIG_NO_AEON
 "\
-                                 cryptonight-lite\n"
+                               cryptonight-lite\n"
 #endif
 #ifndef XMRIG_NO_CN_ULTRALITE
-        "\
-                                 cryptonight-ultralite\n"
-#endif
-#ifndef XMRIG_NO_CN_EXTREMELITE
-        "\
-                                 cryptonight-extremelite\n"
+"\
+                               cryptonight-ultralite\n"
 #endif
 #ifndef XMRIG_NO_SUMO
 "\
-                                 cryptonight-heavy\n"
+                               cryptonight-heavy\n"
 #endif
 "\
   -o, --url=URL                URL of mining server\n\

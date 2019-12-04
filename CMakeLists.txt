@@ -125,7 +125,7 @@ set(HEADERS_CRYPTO
     src/crypto/skein_port.h
     src/crypto/soft_aes.h
    )
-   
+
 if (XMRIG_ARM)
     set(HEADERS_CRYPTO "${HEADERS_CRYPTO}" src/crypto/CryptoNight_arm.h)
 else()

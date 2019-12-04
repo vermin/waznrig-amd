@@ -248,6 +248,7 @@ CryptoNight::cn_hash_fun CryptoNight::fn(xmrig::Algo algorithm, xmrig::AlgoVerif
         cryptonight_single_hash<CRYPTONIGHT, true,  VARIANT_DOUBLE>,
 
         nullptr, nullptr, // VARIANT UPX2
+        nullptr, nullptr, // VARIANT WAZN1
 
 #       ifndef XMRIG_NO_AEON
         cryptonight_single_hash<CRYPTONIGHT_LITE, false, VARIANT_0>,
@@ -277,6 +278,7 @@ CryptoNight::cn_hash_fun CryptoNight::fn(xmrig::Algo algorithm, xmrig::AlgoVerif
         nullptr, nullptr, // VARIANT_ZELERIUS
         nullptr, nullptr, // VARIANT_DOUBLE
         nullptr, nullptr, // VARIANT UPX2
+        nullptr, nullptr, // VARIANT WAZN1
 
 #       else
         nullptr, nullptr, nullptr, nullptr,
@@ -289,6 +291,7 @@ CryptoNight::cn_hash_fun CryptoNight::fn(xmrig::Algo algorithm, xmrig::AlgoVerif
         nullptr, nullptr, nullptr, nullptr,
         nullptr, nullptr, nullptr, nullptr,
         nullptr, nullptr, nullptr, nullptr,
+        nullptr, nullptr,
 #       endif
 
 #       ifndef XMRIG_NO_SUMO
@@ -320,6 +323,7 @@ CryptoNight::cn_hash_fun CryptoNight::fn(xmrig::Algo algorithm, xmrig::AlgoVerif
         nullptr, nullptr, // VARIANT_ZELERIUS
         nullptr, nullptr, // VARIANT_DOUBLE
         nullptr, nullptr, // VARIANT UPX2
+        nullptr, nullptr, // VARIANT WAZN1
 #       else
         nullptr, nullptr, nullptr, nullptr,
         nullptr, nullptr, nullptr, nullptr,
@@ -331,6 +335,7 @@ CryptoNight::cn_hash_fun CryptoNight::fn(xmrig::Algo algorithm, xmrig::AlgoVerif
         nullptr, nullptr, nullptr, nullptr,
         nullptr, nullptr, nullptr, nullptr,
         nullptr, nullptr, nullptr, nullptr,
+        nullptr, nullptr,
 #       endif
 
 #       ifndef XMRIG_NO_CN_ULTRALITE
@@ -361,6 +366,7 @@ CryptoNight::cn_hash_fun CryptoNight::fn(xmrig::Algo algorithm, xmrig::AlgoVerif
         nullptr, nullptr, // VARIANT_ZELERIUS
         nullptr, nullptr, // VARIANT_DOUBLE
         nullptr, nullptr, // VARIANT UPX2
+        nullptr, nullptr, // VARIANT WAZN1
 #else
         nullptr, nullptr, nullptr, nullptr,
         nullptr, nullptr, nullptr, nullptr,
@@ -395,6 +401,9 @@ CryptoNight::cn_hash_fun CryptoNight::fn(xmrig::Algo algorithm, xmrig::AlgoVerif
         nullptr, nullptr, // VARIANT_ZELERIUS
         nullptr, nullptr, // VARIANT_DOUBLE
 
+        cryptonight_single_hash<CRYPTONIGHT_EXTREMELITE, false, VARIANT_WAZN1>,
+        cryptonight_single_hash<CRYPTONIGHT_EXTREMELITE, true,  VARIANT_WAZN1>,
+
         cryptonight_single_hash<CRYPTONIGHT_EXTREMELITE, false, VARIANT_UPX2>,
         cryptonight_single_hash<CRYPTONIGHT_EXTREMELITE, true,  VARIANT_UPX2>,
 #else
@@ -407,7 +416,8 @@ CryptoNight::cn_hash_fun CryptoNight::fn(xmrig::Algo algorithm, xmrig::AlgoVerif
         nullptr, nullptr, nullptr, nullptr,
         nullptr, nullptr, nullptr, nullptr,
         nullptr, nullptr, nullptr, nullptr,
-        nullptr, nullptr, nullptr, nullptr
+        nullptr, nullptr, nullptr, nullptr,
+        nullptr, nullptr
 #   endif
     };
 
@@ -475,7 +485,8 @@ bool CryptoNight::selfTest() {
 
 #   ifndef XMRIG_NO_CN_EXTREMELITE
     if (m_algorithm == xmrig::CRYPTONIGHT_EXTREMELITE) {
-        return verify(VARIANT_UPX2, test_output_upx2);
+        return verify(VARIANT_WAZN1, test_output_wazn1) &&
+               verify(VARIANT_UPX2,  test_output_upx2);
     }
 #   endif
 
