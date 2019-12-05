@@ -110,9 +110,6 @@ Also you can use configuration via config file, default **[config.json](https://
 ### Windows only: DLL error on starting
 * Make sure that you installed latest Visual C++ Redistributable for Visual Studio 2015. Can be downloaded here: [microsoft.com](https://www.microsoft.com/de-de/download/details.aspx?id=48145)
 
-## Contacts
-* [WAZN](link)
-
 ## License
 ```
 Licensed under the GPL-3.0
