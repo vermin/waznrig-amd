@@ -5,7 +5,7 @@ WAZNRig-amd is a high performance WAZN1, RandomX, CryptoNight and Argon2 AMD GPU
 
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue)](https://opensource.org/licenses/GPL-3.0)
 
-:bulb: **This is AMD GPU (OpenCL) variant of WAZNRig. If you're looking for CPU version redirect to: [github.com/project-wazn/waznrig](https://github.com/project-wazn/waznrig/).**
+**This is AMD GPU (OpenCL) variant of WAZNRig. If you're looking for CPU version redirect to: [waznrig](https://github.com/project-wazn/waznrig/).**
 
 ### About WAZNRig-amd (OpenCL)
 
