@@ -1,33 +1,37 @@
 WAZNRig-amd (OpenCL)
 ======================
 
+WAZNRig-amd is a high performance WAZN1, RandomX, CryptoNight and Argon2 AMD GPU (OpenCL) miner supporting Win10 and Ubuntu OS flavors.
+
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue)](https://opensource.org/licenses/GPL-3.0)
+
+:bulb: **This is AMD GPU (OpenCL) variant of WAZNRig. If you're looking for CPU version redirect to: [github.com/project-wazn/waznrig](https://github.com/project-wazn/waznrig/).**
 
 ### About WAZNRig-amd (OpenCL)
 
-WAZNRig-amd is a fork of [XMRigCC-amd](https://github.com/Bendr0id/xmrigCC-amd) which adds the ability to remote control your WAZNRig-amd instances via a Webfrontend and REST api.
-This fork is based on XMRigCC-amd and adds a "Command and Control" (C&amp;C) server, a daemon to reload the miner on config changes and modifications in XMRig-amd to send the current status to the C&amp;C Server.
-The modified version can also handle commands like "update config", "start/stop mining" or "restart/shutdown" which can be send from the C&amp;C-Server.
+WAZNRig-amd is a [XMRigCC-amd](https://github.com/Bendr0id/xmrigCC-amd) fork adding remote control and monitoring functions to WAZNRig-amd instances via a Webfrontend and REST api. It has built in "Command and Control" (C&amp;C) server part, a daemon keeping waznrigMiner alive and sending its current status to C&amp;C Server.
+
+The modified version can handle commands as "update config", "start/stop mining" or "restart/shutdown/reboot" and they can be sent from the C&amp;C Dashboard.
+
+Assign config templates to multiple miners with a single click and let them switch configs without connecting to any of them. Watch your miners logs with simple remote log viewer and monitor you miners. When the hash rate drops or one of your miners goes offline you can opt-in notification system provided by PushOver or Telegram and status changes will be sent to you automatically.
 
 GPU mining part based on [Wolf9466](https://github.com/OhGodAPet) and [psychocrypt](https://github.com/psychocrypt) code.
 
-**XMRigCC Daemon(miner)**
+**WAZNRig Daemon**
 
 ![Screenshot of XMRig Daemon (miner)](https://i.imgur.com/48uGuDI.jpg)
 
-**XMRigCC Server**
+**WAZNRig Server**
 
 ![Screenshot of XMRigCC Server](https://i.imgur.com/iS1RzgO.png)
 
-**XMRigCC Dashboard**
+**WAZNRig Dashboard**
 
 ![Screenshot of XMRigCC Dashboard](https://imgur.com/UrdTHpM.png)
-
 
 ## Download
 * Binary releases: https://github.com/project-wazn/waznrig-amd/releases
 * Git tree: https://github.com/project-wazn/waznrig-amd.git
-  * Clone with `git clone https://github.com/project-wazn/waznrig-amd.git`  [Build instructions](https://github.com/project-wazn/waznrig-amd/wiki/Build-Debian%5CUbuntu).
 
 ## Usage
 ### Basic example waznrigServer
